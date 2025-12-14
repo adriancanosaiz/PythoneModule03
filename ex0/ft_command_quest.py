@@ -1,6 +1,19 @@
+"""Command Quest module for processing command-line arguments.
+
+This module demonstrates how to access and manipulate command-line arguments
+using sys.argv in Python.
+"""
 import sys
 
+
 def main():
+    """Process and display command-line arguments received.
+
+    Displays the program name,
+    number of arguments received,
+    and each argument individually.
+    If no arguments are provided, displays a message indicating so.
+    """
     print("=== Command Quest ===")
 
     args = sys.argv
@@ -22,6 +35,7 @@ def main():
         i += 1
 
     print(f"Total arguments: {total_args}")
+
 
 if __name__ == "__main__":
     main()

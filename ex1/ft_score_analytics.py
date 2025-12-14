@@ -1,13 +1,32 @@
+"""Player score analytics module.
+
+This module provides functionality to analyze player score statistics,
+including total, average, maximum, minimum, and score range.
+"""
 import sys
 
+
 def main():
+    """Analyze player scores from command-line arguments.
+
+    Reads scores from command-line arguments,
+    validates they are numeric values,
+    and calculates statistics such as total,
+    average, maximum, minimum, and range
+    of the scores.
+
+    Note:
+        Scores must be provided as command-line arguments.
+        Example: python3 ft_score_analytics.py 1500 2300 1800
+    """
 
     print("=== Player Score Analytics ===")
     args = sys.argv[1:]
     total_args = len(args)
 
     if total_args == 0:
-        print("No scores provided. Usage: python3 ft_score_analytics.py <score1> <score2> ...")
+        print("No scores provided. "
+              "Usage: python3 ft_score_analytics.py <score1> <score2> ...")
         return
 
     scores = []
@@ -17,7 +36,8 @@ def main():
         except ValueError:
             print(f"Invalid score detected: {value}")
             print("Please enter only numeric values.")
-            print("Example: python3 ft_score_analytics.py 1500 2300 1800 2100 1950")
+            print("Example: python3 ft_score_analytics.py "
+                  "1500 2300 1800 2100 1950")
             return
 
     total_players = len(scores)
